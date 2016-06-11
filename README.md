@@ -16,7 +16,6 @@ And, if you wish, you can invoke `fractastic` directly:
 
 The only difference in the parameters is that `run.sh` takes an `outputFile` whereas `fractastic` does not.
 
-
 ### Parameter Descriptions
 
 * `outputFile`: the name of the file to output to (do not include file extension; `.ppm` and `.png` are auto-generated)
@@ -34,3 +33,17 @@ Note that the scale and step of the render algorithm are automatically determine
 
 ### ImageMagick
 ImageMagick is available in most package managers, including `homebrew` (Mac) and `apt-get` (Debian, Ubuntu, etc.). Just install it, and be sure that the `convert` command is available.
+
+## Examples
+
+```
+./run.sh fractal1 1000 1000 -2 2 -2 2 -0.618 0 20
+```
+
+```
+./run.sh fractal2 1000 1000 -2 2 -2 2 -0.4 0.6 1
+```
+
+```
+./run.sh fractal3 1000 1000 -2 2 -2 2 -0.8 0.156 1
+```
