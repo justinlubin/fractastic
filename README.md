@@ -6,12 +6,12 @@ Fractastic is a fractal generator written in C.
 
 Use `run.sh` as follows:
 ```
-./run.sh [outputFile] [width] [height] [x_min] [x_max] [y_min] [y_max] [c_re] [c_im] [color_multiplier]
+./run.sh [outputFile] [width] [height] [x_min] [x_max] [y_min] [y_max] [c_re] [c_im] [epsilon] [infinity] [max_iterations] [color_multiplier]
 ```
 
 And, if you wish, you can invoke `fractastic` directly:
 ```
-./fractastic [width] [height] [x_min] [x_max] [y_min] [y_max] [c_re] [c_im] [color_multiplier]
+./fractastic [width] [height] [x_min] [x_max] [y_min] [y_max] [c_re] [c_im] [epsilon] [infinity] [max_iterations] [color_multiplier]
 ```
 
 The only difference in the parameters is that `run.sh` takes an `outputFile` whereas `fractastic` does not.
@@ -27,6 +27,9 @@ The only difference in the parameters is that `run.sh` takes an `outputFile` whe
 * `y_max`: the *y*-coordinate of the upper bound of the rendered image (upper bound of the window)
 * `c_re`: the real component of the complex parameter `c` to be passed into the iterated function f(z) = z<sup>2</sup> + c
 * `c_im`: the imaginary component of the complex parameter `c` to be passed into the iterated function f(z) = z<sup>2</sup> + c
+* `epsilon`: how close a value has to get to an attractor before f can be said to converge
+* `infinity`: the value past which f is said to converge to infinity
+* `max_iterations`: the number of iterations to try before giving up and saying f diverges
 * `color_multiplier`: a multiplier for the contrast of the image (lower values result in more black; higher values result in more white; honestly, just play with it until the fractal looks nice!)
 
 Note that the scale and step of the render algorithm are automatically determined from the above parameters.
@@ -38,7 +41,7 @@ ImageMagick is available in most package managers, including `homebrew` (Mac) an
 
 Example 1:
 ```
-./run.sh examples/fractal1 1000 1000 -2 2 -2 2 -0.618 0 20
+./run.sh examples/fractal1 1000 1000 -2 2 -2 2 -0.618 0 0.001 2 1000 20
 ```
 Output for Example 1:
 
@@ -46,7 +49,7 @@ Output for Example 1:
 
 Example 2:
 ```
-./run.sh examples/fractal2 1000 1000 -2 2 -2 2 -0.4 0.6 1
+./run.sh examples/fractal2 1000 1000 -2 2 -2 2 -0.4 0.6 0.001 2 1000 1
 ```
 Output for Example 2:
 
@@ -54,7 +57,7 @@ Output for Example 2:
 
 Example 3:
 ```
-./run.sh examples/fractal3 1000 1000 -2 2 -2 2 -0.8 0.156 1
+./run.sh examples/fractal3 1000 1000 -2 2 -2 2 -0.8 0.156 0.001 2 1000 1
 ```
 Output for Example 3:
 
