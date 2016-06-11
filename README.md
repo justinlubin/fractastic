@@ -1,5 +1,5 @@
-# fractal-generator
-A fractal generator written in C.
+# Fractastic
+Fractastic is a fractal generator written in C.
 
 ## Usage
 `run.sh` is a script that will handle everything for you automatically. It is heavily commented, so you can see the exact steps that it takes. The C program outputs to `stdout`; `run.sh` just captures its output and pipes it to a `ppm` (and `png`, if ImageMagick is installed) file.
