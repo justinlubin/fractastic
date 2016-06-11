@@ -9,5 +9,12 @@ Use `run.sh` as follows:
 ./run.sh [outputFile] [width] [height] [x_min] [x_max] [y_min] [y_max] [c_re] [c_im] [color_multiplier]
 ```
 
+And, if you wish, you can invoke `fractastic` directly:
+```
+./fractastic [width] [height] [x_min] [x_max] [y_min] [y_max] [c_re] [c_im] [color_multiplier]
+```
+
+The only difference in the parameters is that `run.sh` takes an `outputFile` whereas `fractastic` does not.
+
 ### ImageMagick
 ImageMagick is available in most package managers, including `homebrew` (Mac) and `apt-get` (Debian, Ubuntu, etc.). Just install it, and be sure that the `convert` command is available.
