@@ -1,7 +1,8 @@
 #!/bin/bash
 
-if [ $# -ne 10 ]; then
-    echo "[ERROR] Usage: $0 [outputFile] [width] [height] [x_min] [x_max] [y_min] [y_max] [c_re] [c_im] [color_multiplier]"
+# Check for correct number of arguments
+if [ $# -ne 13 ]; then
+    echo "[ERROR] Usage: $0 [outputFile] [width] [height] [x_min] [x_max] [y_min] [y_max] [c_re] [c_im] [epsilon] [infinity] [max_iterations] [color_multiplier]"
     exit 1
 fi
 

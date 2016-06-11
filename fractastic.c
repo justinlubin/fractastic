@@ -6,8 +6,8 @@
 #include "fractal.h"
 
 int main(int argc, char **argv) {
-    if (argc != 10) {
-        fprintf(stderr, "[ERROR] Correct usage: %s [width] [height] [x_min] [x_max] [y_min] [y_max] [c_re] [c_im] [color_multiplier]\n", argv[0]);
+    if (argc != 13) {
+        fprintf(stderr, "[ERROR] Correct usage: %s [width] [height] [x_min] [x_max] [y_min] [y_max] [c_re] [c_im] [epsilon] [infinity] [max_iterations] [color_multiplier]\n", argv[0]);
         return 1;
     }
 
@@ -22,7 +22,12 @@ int main(int argc, char **argv) {
     const double c_re = strtod(argv[7], NULL);
     const double c_im = strtod(argv[8], NULL);
 
-    const int color_multiplier = strtol(argv[9], NULL, 0);
+    const double epsilon = strtod(argv[9], NULL);
+    const double infinity = strtod(argv[10], NULL);
+
+    const int max_iterations = strtol(argv[11], NULL, 0);
+
+    const int color_multiplier = strtol(argv[12], NULL, 0);
 
     const double x_step = (x_max - x_min) / width;
     const double y_step = (y_max - y_min) / height;
@@ -44,7 +49,7 @@ int main(int argc, char **argv) {
             y0 = y_max - row * y_step;
             z0 = x0 + y0 * I;
 
-            iterations = divergence(julia_c, z0, parameters, 0.001, 2, 1000);
+            iterations = divergence(julia_c, z0, parameters, epsilon, infinity, max_iterations);
             color = color_multiplier * iterations;
 
             output_color(color, color, color);
