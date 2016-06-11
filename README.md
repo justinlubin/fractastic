@@ -34,11 +34,11 @@ The only difference in the parameters is that `run.sh` takes an `outputFile` whe
 * `x_max`: the *x*-coordinate of the right bound of the rendered image (right bound of the window)
 * `y_min`: the *y*-coordinate of the lower bound of the rendered image (lower bound of the window)
 * `y_max`: the *y*-coordinate of the upper bound of the rendered image (upper bound of the window)
-* `c_re`: the real component of the complex parameter `c` to be passed into the iterated function f(z) = z<sup>2</sup> + c
-* `c_im`: the imaginary component of the complex parameter `c` to be passed into the iterated function f(z) = z<sup>2</sup> + c
-* `epsilon`: how close a value has to get to an attractor before f can be said to converge
+* `c_re`: the real component of the complex parameter `c` to be passed into the iterated function *f(z) = z<sup>2</sup> + c*
+* `c_im`: the imaginary component of the complex parameter `c` to be passed into the iterated function *f(z) = z<sup>2</sup> + c*
+* `epsilon`: how close a value has to get to an attractor before *f* can be said to converge
 * `infinity`: the value past which f is said to converge to infinity
-* `max_iterations`: the number of iterations to try before giving up and saying f diverges
+* `max_iterations`: the number of iterations to try before giving up and saying *f* diverges
 * `color_multiplier`: a multiplier for the contrast of the image (lower values result in more black; higher values result in more white; honestly, just play with it until the fractal looks nice!)
 
 Note that the scale and step of the render algorithm are automatically determined from the above parameters.
