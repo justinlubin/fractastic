@@ -59,3 +59,11 @@ Example 3:
 Output for Example 3:
 
 ![Fractal 3](/examples/fractal3.png?raw=true "Fractal 3")
+
+## Purpose
+
+The purpose of this project was to create a simple yet powerful fractal generator in pure, best-practice C code without relying on external libraries. This was done so that I could learn more about fractals and C, as well as to serve as a pedagogical tool for other beginners to learn about C (in particular, how to generate images). Most of the resources I found online were in incomprehensible "Perl-style" C or used advanced graphics libraries.
+
+## Possible Improvements
+
+* Arbitrary function input (or at least arbitrary polynomial input)
