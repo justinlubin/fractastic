@@ -44,7 +44,7 @@ The only difference in the parameters is that `run.sh` takes an `outputFile` whe
 Note that the scale and step of the render algorithm are automatically determined from the above parameters.
 
 ### ImageMagick
-ImageMagick is available in most package managers, including `homebrew` (Mac) and `apt-get` (Debian, Ubuntu, etc.). Just install it, and be sure that the `convert` command is available.
+ImageMagick is available in most package managers, including `homebrew` (Mac) and `apt-get` (Debian, Ubuntu, etc.). Just install it, and be sure that the `convert` command is available. If you do not install ImageMagick, `fractastic` will still work, but you will not be able to get `png` output (only `ppm`).
 
 ## Examples
 
