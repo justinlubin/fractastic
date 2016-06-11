@@ -48,27 +48,39 @@ ImageMagick is available in most package managers, including `homebrew` (Mac) an
 
 ## Examples
 
-Example 1:
+### Example 1
+
+*f(z) = z<sup>2</sup> - 0.618*
+
 ```
 ./run.sh examples/fractal1 1000 1000 -2 2 -2 2 -0.618 0 0.001 2 1000 20
 ```
-Output for Example 1:
+
+#### Output for Example 1
 
 ![Fractal 1](/examples/fractal1.png?raw=true "Fractal 1")
 
-Example 2:
+### Example 2
+
+*f(z) = z<sup>2</sup> + (-0.4 + 0.6i)*
+
 ```
 ./run.sh examples/fractal2 1000 1000 -2 2 -2 2 -0.4 0.6 0.001 2 1000 1
 ```
-Output for Example 2:
+
+#### Output for Example 2
 
 ![Fractal 2](/examples/fractal2.png?raw=true "Fractal 2")
 
-Example 3:
+### Example 3
+
+*f(z) = z<sup>2</sup> + (-0.8 + 0.156i)*
+
 ```
 ./run.sh examples/fractal3 1000 1000 -2 2 -2 2 -0.8 0.156 0.001 2 1000 1
 ```
-Output for Example 3:
+
+#### Output for Example 3
 
 ![Fractal 3](/examples/fractal3.png?raw=true "Fractal 3")
 
