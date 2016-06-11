@@ -92,7 +92,7 @@ ImageMagick is available in most package managers, including `homebrew` (Mac) an
 
 ## Purpose
 
-The purpose of this project was to create a simple yet powerful fractal generator in pure, best-practice C code without relying on external libraries. This was done so that I could learn more about fractals and C, as well as to serve as a pedagogical tool for other beginners to learn about C (in particular, how to generate images). Most of the resources I found online were in incomprehensible &ldquo;Perl-style&rdquo; C or used advanced graphics libraries, so I wanted to provide an alternative.
+The purpose of this project was to create a simple yet powerful fractal generator in pure, best-practice C code without relying on external libraries. This was done so that I could learn more about fractals and C, as well as to serve as a pedagogical tool for other beginners to learn about C (in particular, how to generate images). Most of the resources I found online were in incomprehensible, difficult-to-read C or used advanced graphics libraries, so I wanted to provide an alternative.
 
 ## Possible Improvements
 
