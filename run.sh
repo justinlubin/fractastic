@@ -19,7 +19,7 @@ make
 shift
 
 # Run the program and save the output to a temporary PPM file
-./fractal-generator $@ > $tempFile.ppm
+./fractastic $@ > $tempFile.ppm
 
 # If there was an error with the program, exit
 if [ $? -ne 0 ]; then

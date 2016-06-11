@@ -3,10 +3,10 @@ CC = gcc
 CFLAGS = -g -Wall -O3
 LDFLAGS = -g -lm
 
-fractal-generator: ppm.o fractal.o fractal-generator.o
+fractastic: ppm.o fractal.o fractastic.o
 
-fractal-generator.o: fractal-generator.c
-fractal-generator.c: ppm.h fractal.h
+fractastic.o: fractastic.c
+fractastic.c: ppm.h fractal.h
 
 ppm.o: ppm.c
 ppm.c: ppm.h
@@ -16,7 +16,7 @@ fractal.c: fractal.h
 
 .PHONY: clean
 clean:
-	rm -f *.o fractal-generator
+	rm -f *.o fractastic
 
 .PHONY: all
-	all: clean fractal-generator
+	all: clean fractastic
