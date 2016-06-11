@@ -27,7 +27,7 @@ The only difference in the parameters is that `run.sh` takes an `outputFile` whe
 * `y_max`: the *y*-coordinate of the upper bound of the rendered image (upper bound of the window)
 * `c_re`: the real component of the complex parameter `c` to be passed into the iterated function f(z) = z^2 + c
 * `c_im`: the imaginary component of the complex parameter `c` to be passed into the iterated function f(z) = z^2 + c
-* `color_multiplier`: a multiplier for the contrast of the image
+* `color_multiplier`: a multiplier for the contrast of the image (lower values result in more black; higher values result in more white; honestly, just play with it until the fractal looks nice!)
 
 Note that the scale and step of the render algorithm are automatically determined from the above parameters.
 
