@@ -97,3 +97,4 @@ The purpose of this project was to create a simple yet powerful fractal generato
 ## Possible Improvements
 
 * Arbitrary function input (or at least arbitrary polynomial input)
+* Color
