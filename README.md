@@ -6,12 +6,21 @@ Fractastic is a fractal generator written in C.
 
 Use `run.sh` as follows:
 ```
-./run.sh [outputFile] [width] [height] [x_min] [x_max] [y_min] [y_max] [c_re] [c_im] [epsilon] [infinity] [max_iterations] [color_multiplier]
+./run.sh [outputFile]
+         [width] [height]
+         [x_min] [x_max] [y_min] [y_max]
+         [c_re] [c_im]
+         [epsilon] [infinity] [max_iterations]
+         [color_multiplier]
 ```
 
 And, if you wish, you can invoke `fractastic` directly:
 ```
-./fractastic [width] [height] [x_min] [x_max] [y_min] [y_max] [c_re] [c_im] [epsilon] [infinity] [max_iterations] [color_multiplier]
+./fractastic [width] [height]
+             [x_min] [x_max] [y_min] [y_max]
+             [c_re] [c_im]
+             [epsilon] [infinity] [max_iterations]
+             [color_multiplier]
 ```
 
 The only difference in the parameters is that `run.sh` takes an `outputFile` whereas `fractastic` does not.
