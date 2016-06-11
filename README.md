@@ -16,7 +16,6 @@ And, if you wish, you can invoke `fractastic` directly:
 
 The only difference in the parameters is that `run.sh` takes an `outputFile` whereas `fractastic` does not.
 
-
 ### Parameter Descriptions
 
 * `outputFile`: the name of the file to output to (do not include file extension; `.ppm` and `.png` are auto-generated)
@@ -26,11 +25,25 @@ The only difference in the parameters is that `run.sh` takes an `outputFile` whe
 * `x_max`: the *x*-coordinate of the right bound of the rendered image (right bound of the window)
 * `y_min`: the *y*-coordinate of the lower bound of the rendered image (lower bound of the window)
 * `y_max`: the *y*-coordinate of the upper bound of the rendered image (upper bound of the window)
-* `c_re`: the real component of the complex parameter `c` to be passed into the iterated function f(z) = z^2 + c
-* `c_im`: the imaginary component of the complex parameter `c` to be passed into the iterated function f(z) = z^2 + c
-* `color_multiplier`: a multiplier for the contrast of the image
+* `c_re`: the real component of the complex parameter `c` to be passed into the iterated function f(z) = z<sup>2</sup> + c
+* `c_im`: the imaginary component of the complex parameter `c` to be passed into the iterated function f(z) = z<sup>2</sup> + c
+* `color_multiplier`: a multiplier for the contrast of the image (lower values result in more black; higher values result in more white; honestly, just play with it until the fractal looks nice!)
 
 Note that the scale and step of the render algorithm are automatically determined from the above parameters.
 
 ### ImageMagick
 ImageMagick is available in most package managers, including `homebrew` (Mac) and `apt-get` (Debian, Ubuntu, etc.). Just install it, and be sure that the `convert` command is available.
+
+## Examples
+
+```
+./run.sh fractal1 1000 1000 -2 2 -2 2 -0.618 0 20
+```
+
+```
+./run.sh fractal2 1000 1000 -2 2 -2 2 -0.4 0.6 1
+```
+
+```
+./run.sh fractal3 1000 1000 -2 2 -2 2 -0.8 0.156 1
+```
