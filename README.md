@@ -36,14 +36,26 @@ ImageMagick is available in most package managers, including `homebrew` (Mac) an
 
 ## Examples
 
+Example 1:
 ```
-./run.sh fractal1 1000 1000 -2 2 -2 2 -0.618 0 20
+./run.sh examples/fractal1 1000 1000 -2 2 -2 2 -0.618 0 20
 ```
+Output for Example 1:
 
-```
-./run.sh fractal2 1000 1000 -2 2 -2 2 -0.4 0.6 1
-```
+![Fractal 1](/examples/fractal1.png?raw=true "Fractal 1")
 
+Example 2:
 ```
-./run.sh fractal3 1000 1000 -2 2 -2 2 -0.8 0.156 1
+./run.sh examples/fractal2 1000 1000 -2 2 -2 2 -0.4 0.6 1
 ```
+Output for Example 2:
+
+![Fractal 2](/examples/fractal2.png?raw=true "Fractal 2")
+
+Example 3:
+```
+./run.sh examples/fractal3 1000 1000 -2 2 -2 2 -0.8 0.156 1
+```
+Output for Example 3:
+
+![Fractal 3](/examples/fractal3.png?raw=true "Fractal 3")
