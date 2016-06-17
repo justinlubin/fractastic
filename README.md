@@ -6,40 +6,44 @@ Fractastic is a simple and approachable fractal generator written in C. It gener
 
 Use `run.sh` as follows:
 ```
-./run.sh [outputFile]
-         [width] [height]
-         [x_min] [x_max] [y_min] [y_max]
-         [c_re] [c_im]
-         [epsilon] [infinity] [max_iterations]
-         [color_multiplier]
+./run.sh [output_file] [fractastic_options]
 ```
 
-And, if you wish, you can invoke `fractastic` directly:
+where [fractastic_options] are the options that you would pass in as if you had invoked `fractastic` directly (as follows).
+
+For Julia sets:
 ```
-./fractastic [width] [height]
-             [x_min] [x_max] [y_min] [y_max]
-             [c_re] [c_im]
-             [epsilon] [infinity] [max_iterations]
-             [color_multiplier]
+./fractastic J [width] [height]
+               [x_min] [x_max] [y_min] [y_max]
+               [max_iterations]
+               [color_multiplier]
+               [c_re] [c_im]
+               [d]
 ```
 
-The only difference in the parameters is that `run.sh` takes an `outputFile` whereas `fractastic` does not.
+And for Mandelbrot sets:
+```
+./fractastic M [width] [height]
+               [x_min] [x_max] [y_min] [y_max]
+               [max_iterations]
+               [color_multiplier]
+               [d]
+```
 
 ### Parameter Descriptions
 
-* `outputFile`: the name of the file to output to (do not include file extension; `.ppm` and `.png` are auto-generated)
+* `output_file`: the name of the file to output to (do not include file extension; `.ppm` and `.png` are auto-generated)
 * `width`: the width of the output file in pixels
 * `height`: the height of the output file in pixels
 * `x_min`: the *x*-coordinate of the left bound of the rendered image (left bound of the window)
 * `x_max`: the *x*-coordinate of the right bound of the rendered image (right bound of the window)
 * `y_min`: the *y*-coordinate of the lower bound of the rendered image (lower bound of the window)
 * `y_max`: the *y*-coordinate of the upper bound of the rendered image (upper bound of the window)
-* `c_re`: the real component of the complex parameter `c` to be passed into the iterated function *f(z) = z<sup>2</sup> + c*
-* `c_im`: the imaginary component of the complex parameter `c` to be passed into the iterated function *f(z) = z<sup>2</sup> + c*
-* `epsilon`: how close a value has to get to an attractor before *f* can be said to converge
-* `infinity`: the value past which f is said to converge to infinity
-* `max_iterations`: the number of iterations to try before giving up and saying *f* diverges
+* `max_iterations`: the number of iterations to try before determining that f does not diverge
 * `color_multiplier`: a multiplier for the contrast of the image (lower values result in more black; higher values result in more white; honestly, just play with it until the fractal looks nice!)
+* `c_re`: the real component of the complex parameter `c` to be passed into the iterated function *f(z) = z<sup>d</sup> + c*
+* `c_im`: the imaginary component of the complex parameter `c` to be passed into the iterated function *f(z) = z<sup>d</sup> + c*
+* `d`: the real parameter `d` to be passed into the iterated function *f(z) = z<sup>d</sup> + c*
 
 Note that the scale and step of the render algorithm are automatically determined from the above parameters.
 
@@ -96,5 +100,4 @@ The purpose of this project was to create a simple yet powerful fractal generato
 
 ## Possible Improvements
 
-* Arbitrary function input (or at least arbitrary polynomial input)
 * Color

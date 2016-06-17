@@ -1,8 +1,7 @@
 #!/bin/bash
 
-# Check for correct number of arguments
-if [ $# -ne 13 ]; then
-    echo "[ERROR] Usage: $0 [outputFile] [width] [height] [x_min] [x_max] [y_min] [y_max] [c_re] [c_im] [epsilon] [infinity] [max_iterations] [color_multiplier]"
+if [ $# -eq 0 ]; then
+    echo "Usage: ./run.sh [file] [fractastic_options]"
     exit 1
 fi
 
@@ -15,6 +14,11 @@ outputFile=$1
 # Compile the program
 make
 
+# If there was an error with compilation, exit
+if [ $? -ne 0 ]; then
+    exit 2
+fi
+
 # Shift the arguments so that the output filename does not get
 # passed to the C program
 shift
@@ -25,7 +29,7 @@ shift
 # If there was an error with the program, exit
 if [ $? -ne 0 ]; then
     rm $tempFile.ppm
-    exit 2
+    exit 3
 fi
 
 # Remove any previous image files with same name
