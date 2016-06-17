@@ -1,5 +1,5 @@
 # Fractastic
-Fractastic is a simple and approachable fractal generator written in C. It generates Julia set fractals by repeatedly iterating a complex quadratic function until convergence (or divergence). A point is said to converge if either the magnitude of the difference between iterated values of the function at that point go to zero ***OR*** if it converges to infinity by attaining a value larger than a specified parameter. The number of iterations required to converge at a point is recorded and used as part of the value to color the related pixel in the final, rendered image of the fractal.
+Fractastic is a simple and approachable fractal generator written in C. It generates Julia set fractals by repeatedly iterating a complex quadratic function until divergence (or convergence). The number of iterations required to diverge at a point is recorded and used as part of the value to color the related pixel in the final, rendered image of the fractal.
 
 ## Usage
 `run.sh` is a script that will handle everything for you automatically. It is heavily commented, so you can see the exact steps that it takes. The C program outputs to `stdout`; `run.sh` just captures its output and pipes it to a `ppm` (and `png`, if ImageMagick is installed) file.
@@ -52,47 +52,107 @@ ImageMagick is available in most package managers, including `homebrew` (Mac) an
 
 ## Examples
 
-### Example 1
+To generate all of these examples, execute `./gen-examples.sh`. Note that this may take a while depending on the speed of your computer.
+
+I deleted the `ppm` output of these commands before uploading them to the git repository to save (massive amounts) of space. In normal usage, these commands will generate `ppm` files.
+
+### Example 1 (Julia Set)
 
 #### Input
 
 *f(z) = z<sup>2</sup> - 0.618*
 
 ```
-./run.sh examples/fractal1 1000 1000 -2 2 -2 2 -0.618 0 0.001 2 1000 20
+./run.sh examples/julia1 J 2000 2000 -2 2 -2 2 1000 20 -0.618 0 2
 ```
 
 #### Output
 
-![Fractal 1](/examples/fractal1.png?raw=true "Fractal 1")
+![Julia Set Fractal 1](/examples/julia1.png?raw=true "Julia Set Fractal 1")
 
-### Example 2
+### Example 2 (Julia Set)
 
 #### Input
 
 *f(z) = z<sup>2</sup> + (-0.4 + 0.6i)*
 
 ```
-./run.sh examples/fractal2 1000 1000 -2 2 -2 2 -0.4 0.6 0.001 2 1000 1
+./run.sh examples/julia2 J 2000 2000 -2 2 -2 2 1000 1 -0.4 0.6 2
 ```
 
 #### Output
 
-![Fractal 2](/examples/fractal2.png?raw=true "Fractal 2")
+![Julia Set Fractal 2](/examples/julia2.png?raw=true "Julia Set Fractal 2")
 
-### Example 3
+### Example 3 (Julia Set)
+
+#### Input
+
+*f(z) = z<sup>3</sup> + (-0.4 + 0.6i)*
+
+```
+./run.sh examples/julia3 J 2000 2000 -2 2 -2 2 1000 1 -0.4 0.6 3
+```
+
+#### Output
+
+![Julia Set Fractal 3](/examples/julia3.png?raw=true "Julia Set Fractal 3")
+
+### Example 4 (Julia Set)
 
 #### Input
 
 *f(z) = z<sup>2</sup> + (-0.8 + 0.156i)*
 
 ```
-./run.sh examples/fractal3 1000 1000 -2 2 -2 2 -0.8 0.156 0.001 2 1000 1
+./run.sh examples/julia4 J 2000 2000 -2 2 -2 2 1000 1 -0.8 0.156 2
 ```
 
 #### Output
 
-![Fractal 3](/examples/fractal3.png?raw=true "Fractal 3")
+![Julia Set Fractal 4](/examples/julia4.png?raw=true "Julia Set Fractal 4")
+
+### Example 5 (Mandelbrot Set)
+
+#### Input
+
+*f(z) = z<sup>2</sup> + c*
+
+```
+./run.sh examples/mandel1 M 2000 2000 -2.5 1.5 -2 2 1000 1 2
+```
+
+#### Output
+
+![Mandelbrot Set Fractal 1](/examples/mandel1.png?raw=true "Mandelbrot Set Fractal 1")
+
+### Example 6 (Mandelbrot Set)
+
+#### Input
+
+*f(z) = z<sup>3</sup> + c*
+
+```
+./run.sh examples/mandel2 M 2000 2000 -2 2 -2 2 1000 1 3
+```
+
+#### Output
+
+![Mandelbrot Set Fractal 2](/examples/mandel2.png?raw=true "Mandelbrot Set Fractal 2")
+
+### Example 7 (Mandelbrot Set)
+
+#### Input
+
+*f(z) = z<sup>4</sup> + c*
+
+```
+./run.sh examples/mandel3 M 2000 2000 -2 2 -2 2 1000 1 4
+```
+
+#### Output
+
+![Mandelbrot Set Fractal 3](/examples/mandel3.png?raw=true "Mandelbrot Set Fractal 3")
 
 ## Purpose
 
