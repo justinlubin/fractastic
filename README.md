@@ -21,7 +21,7 @@ For Julia sets:
                [d]
 ```
 
-And for Mandelbrot sets:
+And for (generalized) Mandelbrot sets:
 ```
 ./fractastic M [width] [height]
                [x_min] [x_max] [y_min] [y_max]
@@ -91,7 +91,7 @@ I deleted the `ppm` output of these commands before uploading them to the git re
 *f(z) = z<sup>3</sup> + (-0.4 + 0.6i)*
 
 ```
-./run.sh examples/julia3 J 2000 2000 -2 2 -2 2 1000 1 -0.4 0.6 3
+./run.sh examples/julia3 J 2000 2000 -2 2 -2 2 1000 20 -0.4 0.6 3
 ```
 
 #### Output
@@ -119,7 +119,7 @@ I deleted the `ppm` output of these commands before uploading them to the git re
 *f(z) = z<sup>2</sup> + c*
 
 ```
-./run.sh examples/mandel1 M 2000 2000 -2.5 1.5 -2 2 1000 1 2
+./run.sh examples/mandel1 M 2000 2000 -2.5 1.5 -2 2 1000 20 2
 ```
 
 #### Output
@@ -133,7 +133,7 @@ I deleted the `ppm` output of these commands before uploading them to the git re
 *f(z) = z<sup>3</sup> + c*
 
 ```
-./run.sh examples/mandel2 M 2000 2000 -2 2 -2 2 1000 1 3
+./run.sh examples/mandel2 M 2000 2000 -2 2 -2 2 1000 20 3
 ```
 
 #### Output
@@ -147,12 +147,26 @@ I deleted the `ppm` output of these commands before uploading them to the git re
 *f(z) = z<sup>4</sup> + c*
 
 ```
-./run.sh examples/mandel3 M 2000 2000 -2 2 -2 2 1000 1 4
+./run.sh examples/mandel3 M 2000 2000 -2 2 -2 2 1000 20 4
 ```
 
 #### Output
 
 ![Mandelbrot Set Fractal 3](/examples/mandel3.png?raw=true "Mandelbrot Set Fractal 3")
+
+### Example 8 (Mandelbrot Set)
+
+#### Input
+
+*f(z) = z<sup>6</sup> + c*
+
+```
+./run.sh examples/mandel4 M 2000 2000 -2 2 -2 2 1000 20 6
+```
+
+#### Output
+
+![Mandelbrot Set Fractal 4](/examples/mandel4.png?raw=true "Mandelbrot Set Fractal 4")
 
 ## Purpose
 
