@@ -56,7 +56,7 @@ To generate all of these examples, execute `./gen-examples.sh`. Note that this m
 
 I deleted the `ppm` output of these commands before uploading them to the git repository to save (massive amounts) of space. In normal usage, these commands will generate `ppm` files.
 
-### Example 1 (Julia Set)
+### Example 1 (Julia set)
 
 #### Input
 
@@ -70,7 +70,7 @@ I deleted the `ppm` output of these commands before uploading them to the git re
 
 ![Julia Set Fractal 1](/examples/julia1.png?raw=true "Julia Set Fractal 1")
 
-### Example 2 (Julia Set)
+### Example 2 (Julia set)
 
 #### Input
 
@@ -84,7 +84,7 @@ I deleted the `ppm` output of these commands before uploading them to the git re
 
 ![Julia Set Fractal 2](/examples/julia2.png?raw=true "Julia Set Fractal 2")
 
-### Example 3 (Julia Set)
+### Example 3 (Julia set)
 
 #### Input
 
@@ -98,7 +98,7 @@ I deleted the `ppm` output of these commands before uploading them to the git re
 
 ![Julia Set Fractal 3](/examples/julia3.png?raw=true "Julia Set Fractal 3")
 
-### Example 4 (Julia Set)
+### Example 4 (Julia set)
 
 #### Input
 
@@ -112,7 +112,7 @@ I deleted the `ppm` output of these commands before uploading them to the git re
 
 ![Julia Set Fractal 4](/examples/julia4.png?raw=true "Julia Set Fractal 4")
 
-### Example 5 (Mandelbrot Set)
+### Example 5 (Mandelbrot set)
 
 #### Input
 
@@ -126,7 +126,7 @@ I deleted the `ppm` output of these commands before uploading them to the git re
 
 ![Mandelbrot Set Fractal 1](/examples/mandel1.png?raw=true "Mandelbrot Set Fractal 1")
 
-### Example 6 (Mandelbrot Set)
+### Example 6 (Mandelbrot set)
 
 #### Input
 
@@ -140,7 +140,7 @@ I deleted the `ppm` output of these commands before uploading them to the git re
 
 ![Mandelbrot Set Fractal 2](/examples/mandel2.png?raw=true "Mandelbrot Set Fractal 2")
 
-### Example 7 (Mandelbrot Set)
+### Example 7 (Mandelbrot set)
 
 #### Input
 
@@ -154,7 +154,7 @@ I deleted the `ppm` output of these commands before uploading them to the git re
 
 ![Mandelbrot Set Fractal 3](/examples/mandel3.png?raw=true "Mandelbrot Set Fractal 3")
 
-### Example 8 (Mandelbrot Set)
+### Example 8 (Mandelbrot set)
 
 #### Input
 
